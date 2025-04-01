@@ -1,0 +1,115 @@
+<!-- Marketplace -->
+<section id="marketplace">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.zYsFTau-h5aJLvM7V6m_IAHaEo?w=1080&h=675&rs=1&pid=ImgDetMain" alt="Marketplace" class="section-img">
+    <h2>Business Promotion & Marketplace</h2>
+    <p>Promote your business and reach more customers.</p>
+
+    <!-- Search Bar -->
+    <input type="text" id="marketplace-search" placeholder="Search for businesses..." onkeyup="searchMarketplace()">
+
+    <!-- Business Listings -->
+    <div id="marketplace-list">
+        <div class="business-card">
+            <img src="https://m.media-amazon.com/images/I/71uYP00dOpL._AC_UL320_.jpg" alt="Business 1">
+            <h3>Handmade Jewelry</h3>
+            <p>Authentic, handcrafted jewelry made by women artisans.</p>
+            <button onclick="visitBusiness('https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3')">Visit Store</button>
+        </div>
+
+        <div class="business-card">
+            <img src="https://m.media-amazon.com/images/I/517EfallGoL._AC_UL320_.jpg" alt="Business 2">
+            <h3>Organic Skincare</h3>
+            <p>Natural skincare products made from organic ingredients.</p>
+            <button onclick="visitBusiness('https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3')">Visit Store</button>
+        </div>
+
+        <div class="business-card">
+            <img src="https://m.media-amazon.com/images/I/61uFg7QEidL._AC_UL320_.jpg" alt="Business 3">
+            <h3>Handwoven Sarees</h3>
+            <p>Traditional handwoven sarees crafted by rural women.</p>
+            <button onclick="visitBusiness('https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3')">Visit Store</button>
+        </div>
+    </div>
+
+    <!-- Add Business Button -->
+    <button onclick="addBusiness()">List Your Business</button>
+</section>
+
+<style>
+    #marketplace {
+        text-align: center;
+        padding: 30px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    #marketplace-search {
+        width: 80%;
+        padding: 10px;
+        margin: 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #marketplace-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .business-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        text-align: center;
+    }
+
+    .business-card img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .business-card button {
+        background-color: #007BFF;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .business-card button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<script>
+    function visitBusiness(url) {
+        window.location.href = url;
+    }
+
+    function searchMarketplace() {
+        let input = document.getElementById("marketplace-search").value.toLowerCase();
+        let cards = document.querySelectorAll(".business-card");
+
+        cards.forEach(card => {
+            let title = card.querySelector("h3").innerText.toLowerCase();
+            if (title.includes(input)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    function addBusiness() {
+        alert("Feature coming soon! Stay tuned.");
+    }
+</script>

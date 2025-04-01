@@ -1,0 +1,131 @@
+<!-- Virtual Assistance Section -->
+<section id="virtual-assistance">
+    <div class="container">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.gPM-jSaes1fMbYqg1px9zwHaE8?rs=1&pid=ImgDetMain" alt="Virtual Assistance" class="section-img">
+        <div class="content">
+            <h2>🚀 Virtual Business Consultation</h2>
+            <p>Get expert advice on business growth, funding, and strategy.</p>
+
+            <!-- Meeting Details -->
+            <div class="meeting-details">
+                <p><strong>🗓 Available Slots:</strong> Mon-Fri | 10 AM - 5 PM</p>
+                <p><strong>📍 Platform:</strong> Zoom</p>
+            </div>
+
+            <!-- Schedule Meeting Button -->
+            <button onclick="redirectToZoom()" class="schedule-meeting">📅 Schedule Meeting</button>
+        </div>
+    </div>
+
+    <!-- Floating Chat Icon -->
+    <div id="chat-assistant" onclick="openChat()">
+        💬 Need Help?
+    </div>
+</section>
+
+<style>
+    /* Virtual Assistance Section Styling */
+    #virtual-assistance {
+        text-align: center;
+        padding: 50px;
+        background: linear-gradient(135deg, #f6f9fc 30%, #e3efff 100%);
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 85%;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        text-align: left;
+    }
+
+    .section-img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-right: 20px;
+    }
+
+    .content {
+        max-width: 500px;
+    }
+
+    h2 {
+        color: #007BFF;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    .meeting-details {
+        background: #ffffff;
+        padding: 12px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+    }
+
+    /* Schedule Meeting Button */
+    .schedule-meeting {
+        background-color: #007bff;
+        color: white;
+        padding: 14px 24px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        font-weight: bold;
+    }
+
+    .schedule-meeting:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+
+    /* Floating Chat Icon */
+    #chat-assistant {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: white;
+        padding: 12px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    #chat-assistant:hover {
+        background: #0056b3;
+        transform: scale(1.1);
+    }
+</style>
+
+<script>
+    function redirectToZoom() {
+        const zoomMeetingLink = "https://zoom.us/join"; // Replace with your actual Zoom scheduling link
+        window.location.href = zoomMeetingLink;
+    }
+
+    function openChat() {
+        alert("💬 Chat Assistant: How can we help you today?");
+    }
+</script>

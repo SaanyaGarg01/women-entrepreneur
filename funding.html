@@ -1,0 +1,244 @@
+<!-- Funding Assistance Section -->
+<section id="funding-assistance">
+    <div class="container">
+        <img src="https://www.bplanexperts.com/wp-content/uploads/2020/09/growing-time-value-of-money-investment-wealth-financial-concept-hand-holding-coin-and-us-dollar-bags_t20_znLxnG.jpg" 
+        alt="Funding Assistance" class="section-img">
+
+        <div class="content">
+            <h2>💰 Funding Assistance</h2>
+            <p>Apply for financial support and grow your business with confidence.</p>
+
+            <!-- Funding Programs Cards -->
+            <div class="funding-programs">
+                <div class="card">
+                    <h3>🚀 Startup Grants</h3>
+                    <p>Government-backed startup funds for new businesses.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 Business Loans</h3>
+                    <p>Easy loans with low interest rates for business expansion.</p>
+                </div>
+                <div class="card">
+                    <h3>👩‍💼 Women Entrepreneurs Fund</h3>
+                    <p>Special funding for women-led businesses.</p>
+                </div>
+            </div>
+
+            <!-- Apply for Funding Form -->
+            <div class="apply-form">
+                <h3>📑 Apply for Funding</h3>
+                <input type="text" id="businessName" placeholder="Business Name" required>
+                <input type="text" id="fundingAmount" placeholder="Required Amount (INR)" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <button onclick="submitFundingRequest()">✅ Submit Application</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Startup Information Section -->
+<section id="startup-info">
+    <div class="startup-container">
+        <h2>🚀 Startup Information</h2>
+        <p>Start your business with the right knowledge and financial support.</p>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>📝 Business Registration</h3>
+                <p>Register your startup as a private limited, LLP, or sole proprietorship.</p>
+            </div>
+            <div class="info-card">
+                <h3>💡 Funding Tips</h3>
+                <p>Learn how to pitch your idea to investors and secure funding.</p>
+            </div>
+            <div class="info-card">
+                <h3>📈 Growth Strategies</h3>
+                <p>Scale your startup with expert marketing and financial planning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* General Styling */
+    section {
+        padding: 50px;
+        text-align: center;
+        width: 85%;
+        margin: 50px auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Funding Assistance Section */
+    #funding-assistance {
+        background: linear-gradient(135deg, #f6f9fc 30%, #e3efff 100%);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 900px;
+        text-align: left;
+    }
+
+    .section-img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-right: 20px;
+    }
+
+    h2 {
+        color: #007BFF;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 12px;
+    }
+
+    /* Funding Programs Cards */
+    .funding-programs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        min-width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Apply Form */
+    .apply-form {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .apply-form h3 {
+        margin-bottom: 10px;
+        color: #007BFF;
+    }
+
+    .apply-form input {
+        width: 90%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+    }
+
+    .apply-form button {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 18px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .apply-form button:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+    /* Startup Information Section */
+    #startup-info {
+        background: #fff;
+        margin-top: 30px;
+    }
+
+    .startup-container {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .info-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .info-card {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 30%;
+        min-width: 200px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .section-img {
+            margin-bottom: 20px;
+        }
+
+        .funding-programs, .info-cards {
+            flex-direction: column;
+        }
+
+        .card, .info-card {
+            width: 90%;
+        }
+    }
+</style>
+
+<script>
+    function submitFundingRequest() {
+        let businessName = document.getElementById("businessName").value;
+        let amount = document.getElementById("fundingAmount").value;
+        let email = document.getElementById("email").value;
+
+        if (businessName && amount && email) {
+            alert(`✅ Funding Request Submitted:\nBusiness: ${businessName}\nAmount: ₹${amount}\nEmail: ${email}`);
+        } else {
+            alert("⚠ Please fill all fields!");
+        }
+    }
+</script>
