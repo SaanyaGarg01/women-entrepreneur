@@ -5,18 +5,32 @@ body {
     background: #f8f9fa;
     color: #333;
 }
-
 /* Full-Screen Hero Section */
 .hero {
-    background: url('https://thumbs.dreamstime.com/z/female-professional-business-team-working-office-women-power-concept-155557746.jpg') no-repeat center center/cover;
+    background: url('groupw.jpeg') no-repeat center center/cover;
     height: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(8, 3, 3);
+    color: rgb(245, 245, 245);
     position: relative;
+    padding: 20px; /* Ensures text doesn’t touch edges */
+}
+
+/* Increase Heading Font Size */
+.hero h1 {
+    font-size: 60px; /* Adjust as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Increase Subtitle or Paragraph Font Size */
+.hero p {
+    font-size: 24px; /* Adjust for readability */
+    max-width: 800px; /* Prevents text from stretching too wide */
+    line-height: 1.6;
 }
 
 /* Updated Navbar Styling */
