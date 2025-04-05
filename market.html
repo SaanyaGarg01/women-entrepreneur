@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BizBoost Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    header {
+      background: #1d3557;
+      color: white;
+      padding: 30px 10%;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    .auth-buttons {
+      position: absolute;
+      top: 20px;
+      right: 10%;
+    }
+
+    .auth-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background: white;
+      color: #1d3557;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .auth-buttons button:hover {
+      background: #f1f1f1;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #457b9d;
+      padding: 15px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .hero h2 {
+      font-size: 48px;
+    }
+
+    .features, .categories, .testimonials, .steps {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .features h2, .categories h2, .testimonials h2, .steps h2 {
+      margin-bottom: 40px;
+      color: #1d3557;
+    }
+
+    .feature-grid, .category-grid, .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-box, .category-box, .step-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .feature-box:hover, .category-box:hover, .step-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .cta {
+      background: #e63946;
+      color: white;
+      text-align: center;
+      padding: 60px 10%;
+    }
+
+    .cta h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .cta button {
+      background: white;
+      color: #e63946;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta button:hover {
+      background: #fff3f3;
+    }
+
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 30px 10%;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-style: italic;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 600px) {
+      header h1, .hero h2 {
+        font-size: 32px;
+      }
+      .auth-buttons {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>BizBoost Marketplace</h1>
+    <p>Empowering Women Entrepreneurs Through Digital Business</p>
+    <div class="auth-buttons">
+      <button onclick="alert('Redirecting to Sign Up')">Sign Up</button>
+      <button onclick="alert('Redirecting to Login')">Login</button>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#features">Features</a>
+    <a href="#steps">Steps to Start</a>
+    <a href="#categories">Marketplace</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Boost Your Business Online</h2>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2>Why Choose BizBoost?</h2>
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h3>Digital Storefronts</h3>
+        <p>Create your profile, list products, and gain visibility.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Analytics Dashboard</h3>
+        <p>Understand customer behavior and track growth.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Community Network</h3>
+        <p>Connect with other women entrepreneurs and grow together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps to Start -->
+  <section class="steps" id="steps">
+    <h2>Steps to Start Your Journey</h2>
+    <div class="step-grid">
+      <div class="step-box">
+        <h3>1. Sign Up</h3>
+        <p>Register as a women entrepreneur by clicking on the "Sign Up" button above.</p>
+      </div>
+      <div class="step-box">
+        <h3>2. Create Profile</h3>
+        <p>Fill in your business details, products/services, and contact info.</p>
+      </div>
+      <div class="step-box">
+        <h3>3. Add Listings</h3>
+        <p>Upload photos, prices, and offers of your products or services.</p>
+      </div>
+      <div class="step-box">
+        <h3>4. Go Live</h3>
+        <p>Your digital store will be visible to local and national buyers.</p>
+      </div>
+      <div class="step-box">
+        <h3>5. Promote & Earn</h3>
+        <p>Use built-in tools to promote offers, receive orders, and grow!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marketplace Categories -->
+  <section class="categories" id="categories">
+    <h2>Explore Marketplace</h2>
+    <div class="category-grid">
+      <div class="category-box">
+        <h3>Handicrafts</h3>
+        <p>Sell handmade products and traditional art online.</p>
+      </div>
+      <div class="category-box">
+        <h3>Fashion</h3>
+        <p>Showcase your boutique or clothing line.</p>
+      </div>
+      <div class="category-box">
+        <h3>Food & Bakery</h3>
+        <p>Sell home-cooked meals, snacks, and cakes.</p>
+      </div>
+      <div class="category-box">
+        <h3>Beauty Services</h3>
+        <p>Offer salon or skincare services locally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Women Entrepreneurs Say</h2>
+    <div class="testimonial">
+      “As a home baker, I finally found a platform that supports small businesses. My sales have doubled!”
+      <br><strong>– Priya, Bangalore</strong>
+    </div>
+    <div class="testimonial">
+      “BizBoost gave me a digital identity. I now run online classes for tailoring and earn from home.”
+      <br><strong>– Aarti, Jaipur</strong>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta" id="contact">
+    <h3>Become a Part of India's Women Entrepreneur Revolution</h3>
+    <button onclick="alert('Redirecting to Registration...')">Register Your Business</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 BizBoost Marketplace. All rights reserved.
+  </footer>
+
+</body>
+</html>
