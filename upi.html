@@ -1,115 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPI Payment</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #3f8eb3;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <title>Pay via Paytm</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #95c4d6;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; /* Stack logo and popup vertically */
+      position: relative;
+    }
 
-        .container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            padding: 20px;
-            text-align: center;
-        }
+    /* Paytm Logo */
+    .logo-container {
+      margin-bottom: 20px; /* Creates space between logo and popup */
+    }
 
-        h2 {
-            color: #007BFF;
-            margin-bottom: 20px;
-        }
+    .logo-container img {
+      width: 200px; /* Adjust logo size */
+    }
 
-        .payment-btn {
-            background-color: #28a745;
-            color: white;
-            font-size: 18px;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        .payment-btn:hover {
-            background-color: #218838;
-        }
-
-        .payment-info {
-            margin-bottom: 20px;
-            font-size: 16px;
-            color: #555;
-        }
-
-        .payment-info span {
-            font-weight: bold;
-            color: #007BFF;
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        .footer a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* Popup Box */
+    .popup-box {
+      background: rgba(229, 229, 233, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h2>UPI Payment Integration</h2>
-        <div class="payment-info">
-            <p>Pay <span></span> for your order</p>
-            
-        </div>
-        <button class="payment-btn" onclick="makeUPIPayment()">Pay with UPI</button>
-        <div class="footer">
-            <p>Secure payment via UPI</p>
-            <p><a href="#">Terms & Conditions</a></p>
-        </div>
-    </div>
+  <!-- Paytm Logo Above Popup -->
+  <div class="logo-container" >
+    <img src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.png" alt="Paytm Logo" >
+  </div>
+ <!-- Popup Box -->
+ <div class="popup-box">
+    <h2>Make a Payment</h2>
+    <button class="pay-button" onclick="redirectToPaytm()">Open Paytm to Pay</button>
+    <p>You will be redirected to the Paytm app. Enter recipient UPI ID and amount manually.</p>
+  </div>
 
-    <script>
-        function makeUPIPayment() {
-            const upiID = "example@upi";  // Replace with actual UPI ID
-            const amount = "100"; // Amount in INR
-            const transactionID = "TXN123456"; // Transaction reference
-            const payeeName = "Merchant Name";
-            const note = "Payment for order";
-
-            // Confirm payment action
-            const confirmPayment = confirm(`Are you sure you want to pay ₹${amount} to ${payeeName}?`);
-
-            if (confirmPayment) {
-                // Redirect to Paytm UPI payment link
-                const paytmLink = `https://paytm.onelink.me/1103271506?amount=${amount}&upiID=${upiID}&transactionID=${transactionID}&note=${note}`;
-
-                // Open the Paytm payment URL
-                window.location.href = paytmLink;
-            } else {
-                alert("Payment cancelled");
-            }
-        }
-    </script>
+  <script>
+    function redirectToPaytm() {
+      window.location.href = "https://paytm.com/"; // Redirect to Paytm
+    }
+  </script>
 </body>
 </html>
+
