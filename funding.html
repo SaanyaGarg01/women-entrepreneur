@@ -1,14 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funding Assistance & Startup Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            width: 85%;
+            margin: 50px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007BFF;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+        }
+
+        /* Funding Assistance Section */
+        #funding-assistance {
+            background: linear-gradient(135deg, #f6f9fc 30%, #e3efff 100%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            text-align: left;
+        }
+
+        .section-img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .funding-programs, .info-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .card, .info-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            min-width: 200px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover, .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .apply-form {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .apply-form h3 {
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .apply-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .apply-form button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 18px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .apply-form button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Startup Info */
+        #startup-info {
+            background: #fff;
+            margin-top: 30px;
+        }
+
+        .startup-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Beginner Guide Section */
+        #beginner-guide {
+            background: linear-gradient(to right, #f5fff5, #e1f8ff);
+            padding: 50px 20px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 1000px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .step {
+            background: #ffffff;
+            border-left: 6px solid #28a745;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-4px);
+        }
+
+        .step h3 {
+            color: #28a745;
+            margin-bottom: 5px;
+        }
+
+        .voice-btns {
+            margin-top: 30px;
+        }
+
+        .voice-btns button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            margin: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .voice-btns button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-img {
+                margin-bottom: 20px;
+            }
+
+            .funding-programs, .info-cards {
+                flex-direction: column;
+            }
+
+            .card, .info-card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
 <!-- Funding Assistance Section -->
 <section id="funding-assistance">
     <div class="container">
-        <img src="https://www.bplanexperts.com/wp-content/uploads/2020/09/growing-time-value-of-money-investment-wealth-financial-concept-hand-holding-coin-and-us-dollar-bags_t20_znLxnG.jpg" 
-        alt="Funding Assistance" class="section-img">
+        <img src="https://www.bplanexperts.com/wp-content/uploads/2020/09/growing-time-value-of-money-investment-wealth-financial-concept-hand-holding-coin-and-us-dollar-bags_t20_znLxnG.jpg"
+             alt="Funding Assistance" class="section-img">
 
         <div class="content">
             <h2>💰 Funding Assistance</h2>
             <p>Apply for financial support and grow your business with confidence.</p>
 
-            <!-- Funding Programs Cards -->
             <div class="funding-programs">
                 <div class="card">
                     <h3>🚀 Startup Grants</h3>
@@ -24,7 +239,6 @@
                 </div>
             </div>
 
-            <!-- Apply for Funding Form -->
             <div class="apply-form">
                 <h3>📑 Apply for Funding</h3>
                 <input type="text" id="businessName" placeholder="Business Name" required>
@@ -56,179 +270,49 @@
                 <p>Scale your startup with expert marketing and financial planning.</p>
             </div>
         </div>
-        <img src="flowchart.png" alt="Logo" style="height: 800px; vertical-align: middle; margin-right: 8px;">
+        <img src="flowchart.png" alt="Startup Flowchart" style="height: 800px; vertical-align: middle; margin-right: 8px;">
     </div>
 </section>
 
-<style>
-    /* General Styling */
-    section {
-        padding: 50px;
-        text-align: center;
-        width: 85%;
-        margin: 50px auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
+<!-- Beginner-Friendly Explainer Section -->
+<section id="beginner-guide">
+    <div class="guide-container">
+        <h2>🌼 Simple Guide for Starting Your Business</h2>
+        <p>No need to worry! Here's a step-by-step path, made just for YOU 💪</p>
 
-    /* Funding Assistance Section */
-    #funding-assistance {
-        background: linear-gradient(135deg, #f6f9fc 30%, #e3efff 100%);
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
+        <div class="steps">
+            <div class="step">
+                <h3>1️⃣ Think of an Idea</h3>
+                <p>What do you love to make or sell? It can be anything — food, clothes, crafts, or even services like teaching!</p>
+            </div>
+            <div class="step">
+                <h3>2️⃣ Start Small from Home</h3>
+                <p>You don't need a shop. Use your home! Take pictures of your products using your phone.</p>
+            </div>
+            <div class="step">
+                <h3>3️⃣ Ask for Help</h3>
+                <p>Use this website to apply for <b>funding</b> (money support). You’ll get help from government or NGOs to grow your work.</p>
+            </div>
+            <div class="step">
+                <h3>4️⃣ Sell Online</h3>
+                <p>We’ll guide you to sell on <b>Amazon</b> or <b>Flipkart</b>. Don’t worry—we’ll show you how!</p>
+            </div>
+            <div class="step">
+                <h3>5️⃣ Learn to Manage Money</h3>
+                <p>💸 Don’t spend all profit. Keep some money safe. Learn basic saving and planning with our help.</p>
+            </div>
+            <div class="step">
+                <h3>6️⃣ You’re Not Alone!</h3>
+                <p>Join our <b>Peer Mentorship</b> area to chat with other women and share experiences. 😊</p>
+            </div>
+        </div>
 
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 900px;
-        text-align: left;
-    }
-
-    .section-img {
-        width: 100%;
-        max-width: 350px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-right: 20px;
-    }
-
-    h2 {
-        color: #007BFF;
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 12px;
-    }
-
-    /* Funding Programs Cards */
-    .funding-programs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 15px;
-    }
-
-    .card {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        width: 30%;
-        min-width: 200px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Apply Form */
-    .apply-form {
-        background: #ffffff;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .apply-form h3 {
-        margin-bottom: 10px;
-        color: #007BFF;
-    }
-
-    .apply-form input {
-        width: 90%;
-        padding: 10px;
-        margin: 8px 0;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-    }
-
-    .apply-form button {
-        background-color: #28a745;
-        color: white;
-        padding: 10px 18px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .apply-form button:hover {
-        background-color: #218838;
-        transform: scale(1.05);
-    }
-
-    /* Startup Information Section */
-    #startup-info {
-        background: #fff;
-        margin-top: 30px;
-    }
-
-    .startup-container {
-        max-width: 900px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .info-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin-top: 15px;
-    }
-
-    .info-card {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        width: 30%;
-        min-width: 200px;
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .info-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .section-img {
-            margin-bottom: 20px;
-        }
-
-        .funding-programs, .info-cards {
-            flex-direction: column;
-        }
-
-        .card, .info-card {
-            width: 90%;
-        }
-    }
-</style>
+        <div class="voice-btns">
+            <button onclick="playVoiceGuide()">🔈 Listen to This in Hindi</button>
+            <button onclick="alert('Coming Soon in More Languages!')">🌍 Other Languages</button>
+        </div>
+    </div>
+</section>
 
 <script>
     function submitFundingRequest() {
@@ -242,4 +326,20 @@
             alert("⚠ Please fill all fields!");
         }
     }
+
+    function playVoiceGuide() {
+        const hindiText = `Namaste behno! 
+        Apna business shuru karna mushkil nahi hai. 
+        Aapko bas ek idea chahiye — jaise kapde banana, khana bechna, ya kisi ko kuch sikhana.
+        Ghar se hi chalu karo. Humari website se aap paise ki madad bhi le sakti hain.
+        Amazon ya Flipkart par bechna seekhiye. 
+        Paise bachaiye, aur doosri mahilao se baat karke aur seekhiye.
+        Aap akeli nahi hain — hum sab aapke saath hain!`;
+
+        const speech = new SpeechSynthesisUtterance(hindiText);
+        speech.lang = 'hi-IN';
+        window.speechSynthesis.speak(speech);
+    }
 </script>
+</body>
+</html>
