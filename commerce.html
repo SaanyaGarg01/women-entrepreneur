@@ -1,157 +1,203 @@
 <!-- E-Commerce Support Section -->
 <section id="ecommerce-support">
     <div class="container">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.ZVaDVQZKP4gB2PZngZO30QHaE7?rs=1&pid=ImgDetMain" alt="E-Commerce Support" class="section-img">
-
-        <div class="content">
-            <h2>🛒 Expand Your Business Online</h2>
-            <p>Start selling on top marketplaces and grow your brand.</p>
-
-            <!-- Quick Access to E-Commerce Platforms -->
-            <div class="marketplace-links">
-                <button onclick="redirectToMarketplace('https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3')" class="amazon-btn">📦 Sell on Amazon</button>
-                <button onclick="redirectToMarketplace('https://seller.flipkart.com/?login=true')" class="flipkart-btn">🛍 Sell on Flipkart</button>
-            </div>
-
-            <!-- Start Selling Form -->
-            <div class="sell-form">
-                <h3>🚀 List Your Product</h3>
-                <input type="text" id="productName" placeholder="Product Name" required>
-                <input type="text" id="productCategory" placeholder="Category (e.g., Electronics)" required>
-                <input type="url" id="productLink" placeholder="Your Store Link" required>
-                <button onclick="submitProduct()">✅ Submit</button>
-            </div>
+      <img src="https://tse2.mm.bing.net/th/id/OIP.ZVaDVQZKP4gB2PZngZO30QHaE7?rs=1&pid=ImgDetMain"
+        alt="E-Commerce Support" class="section-img" />
+  
+      <div class="content">
+        <h2>🛒 Expand Your Business Online</h2>
+        <p>Start selling on top marketplaces and grow your brand globally.</p>
+  
+        <!-- Quick Access to E-Commerce Platforms -->
+        <div class="marketplace-links">
+          <button onclick="redirectToMarketplace('https://www.amazon.in/b/32702023031?node=32702023031&ld=AZINSOANavDesktop_T3&ref_=nav_cs_sell_T3')"
+            class="market-btn amazon-btn">📦 Sell on Amazon</button>
+          <button onclick="redirectToMarketplace('https://seller.flipkart.com/?login=true')"
+            class="market-btn flipkart-btn">🛍 Sell on Flipkart</button>
         </div>
+  
+        <!-- Start Selling Form -->
+        <div class="sell-form">
+          <h3>🚀 List Your Product</h3>
+          <input type="text" id="productName" placeholder="Product Name" required />
+          <input type="text" id="productCategory" placeholder="Category (e.g., Electronics)" required />
+          <input type="url" id="productLink" placeholder="Your Store Link" required />
+          <button onclick="submitProduct()">✅ Submit</button>
+        </div>
+      </div>
     </div>
-</section>
-
-<style>
-    /* E-Commerce Support Section Styling */
+  </section>
+  
+  <style>
     #ecommerce-support {
-        text-align: center;
-        padding: 50px;
-        background: linear-gradient(135deg, #f6f9fc 30%, #e3efff 100%);
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        width: 85%;
-        margin: 50px auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      background: linear-gradient(135deg, #eaf6ff, #d0f0fc);
+      padding: 60px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin: 50px auto;
+      width: 90%;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
     }
-
+  
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        max-width: 900px;
-        text-align: left;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1100px;
+      margin: auto;
     }
-
+  
     .section-img {
-        width: 100%;
-        max-width: 350px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin-right: 20px;
+      max-width: 350px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease forwards;
     }
-
+  
     .content {
-        max-width: 500px;
+      max-width: 500px;
+      text-align: left;
+      animation: fadeInUp 1s ease forwards;
     }
-
+  
     h2 {
-        color: #007BFF;
-        font-size: 28px;
-        margin-bottom: 10px;
+      font-size: 32px;
+      color: #0b6ab0;
+      margin-bottom: 10px;
     }
-
+  
     p {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 12px;
+      font-size: 17px;
+      color: #333;
+      margin-bottom: 18px;
     }
-
-    /* Marketplace Buttons */
-    .marketplace-links button {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin: 5px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        font-weight: bold;
+  
+    .marketplace-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
     }
-
-    .amazon-btn:hover {
-        background-color: #ff9900;
-        transform: scale(1.05);
+  
+    .market-btn {
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
-    .flipkart-btn:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
+  
+    .amazon-btn {
+      background-color: #ff9900;
     }
-
-    /* Sell Form */
+  
+    .flipkart-btn {
+      background-color: #007bff;
+    }
+  
+    .market-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  
     .sell-form {
-        background: #ffffff;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 15px;
-        text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
     }
-
+  
     .sell-form h3 {
-        margin-bottom: 10px;
-        color: #007BFF;
+      margin-bottom: 12px;
+      color: #0b6ab0;
     }
-
+  
     .sell-form input {
-        width: 90%;
-        padding: 10px;
-        margin: 8px 0;
-        border: 1px solid #ddd;
-        border-radius: 6px;
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
     }
-
+  
     .sell-form button {
-        background-color: #28a745;
-        color: white;
-        padding: 10px 18px;
-        font-size: 16px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
+  
     .sell-form button:hover {
-        background-color: #218838;
-        transform: scale(1.05);
+      background-color: #218838;
+      transform: scale(1.05);
     }
-</style>
-
-<script>
+  
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+  
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+  
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .section-img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+  
+  <script>
     function redirectToMarketplace(url) {
-        window.location.href = url;
+      window.open(url, "_blank");
     }
-
+  
     function submitProduct() {
-        let name = document.getElementById("productName").value;
-        let category = document.getElementById("productCategory").value;
-        let link = document.getElementById("productLink").value;
-
-        if (name && category && link) {
-            alert(`✅ Product Submitted: \nName: ${name} \nCategory: ${category} \nStore Link: ${link}`);
-        } else {
-            alert("⚠ Please fill all fields!");
-        }
+      let name = document.getElementById("productName").value;
+      let category = document.getElementById("productCategory").value;
+      let link = document.getElementById("productLink").value;
+  
+      if (name && category && link) {
+        alert(`✅ Product Submitted:\n\nName: ${name}\nCategory: ${category}\nStore Link: ${link}`);
+      } else {
+        alert("⚠ Please fill all fields!");
+      }
     }
-</script>
+  </script>
+  
